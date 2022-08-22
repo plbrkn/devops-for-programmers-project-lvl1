@@ -2,11 +2,10 @@ version: "3"
 
 services:
   app:
+    image: vecser/devops-for-programmers-project-lvl1
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
     command: npm test
     ports:
       - "8080:8080"
-    volumes:
-      - ./app:/app
