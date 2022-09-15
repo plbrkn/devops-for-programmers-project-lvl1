@@ -9,8 +9,6 @@ services:
     command: bash -c 'sleep 3 && npm test'
     ports:
       - "8080:8080"
-    volumes:
-      - ./app/.env.example:/app/.env
     depends_on:
       - db
 

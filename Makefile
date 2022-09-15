@@ -9,4 +9,4 @@ ci:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 prepare-env:
-	cp ./app/.env.example ./.env
+	cp ./.env.example ./.env
