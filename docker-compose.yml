@@ -8,8 +8,11 @@ services:
       dockerfile: Dockerfile.production
     command: bash -c 'sleep 3 && npm test'
     environment:
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_PASSWORD: $DATABASE_PASSWORD
+      DATABASE_USERNAME: $DATABASE_USERNAME
+      DATABASE_NAME: $DATABASE_NAME
+      DATABASE_HOST: $DATABASE_HOST
+      DATABASE_PORT: $DATABASE_PORT
     ports:
       - "8080:8080"
     depends_on:
